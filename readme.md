@@ -24,6 +24,7 @@ func main() {
     ctx, cancel := context.WithCancel(context.Background())
     defer cancel()
     ch := sim.WatchTime(ctx)
+    // sim.GetNow() getsim time not by chan
     go func() {
         for {
             v, ok := <-ch
@@ -35,4 +36,7 @@ func main() {
     }()
     sim.UpdateTimeRate(1)
 }
+
+
+
 ```
