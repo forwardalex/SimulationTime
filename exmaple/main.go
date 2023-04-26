@@ -1,9 +1,9 @@
 package main
 
 import (
-	"SimulationTime"
 	"context"
 	"fmt"
+	"github.com/forwardalex/SimulationTime"
 	"time"
 )
 
